@@ -9,7 +9,7 @@ import (
 func GetOasisConn() (*grpc.ClientConn, error) {
 	return oasisGrpc.Dial(
 		config.GetOasisSocket(),
-		grpc.WithInsecure(),
+		grpc.WithInsecure(),  
 		grpc.WithDefaultCallOptions(grpc.WaitForReady(true)),
 	)
 }
